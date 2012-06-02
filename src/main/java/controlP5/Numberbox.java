@@ -302,7 +302,7 @@ public class Numberbox extends Controller<Numberbox> {
 			theApplet.fill((isActive) ? color.getActive() : color.getForeground());
 			//int h = height / 2;
 			//theApplet.triangle(0, h - 6, 6, h, 0, h + 6);
-			_myValueLabel.draw(theApplet, 10, (height - _myValueLabel.getHeight() + 4) / 2, theController);
+			_myValueLabel.draw(theApplet, 0, (height - _myValueLabel.getHeight() + 4) / 2, theController);
 			_myCaptionLabel.draw(theApplet, 0, height + 4,theController);
 		}
 	}
