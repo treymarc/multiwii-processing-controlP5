@@ -1,6 +1,10 @@
 mwi-gui-component / ControlP5 fork
 =================
 
+2012-06-20  Trey Marc
+
+	* adding maven 
+
 2012-05-30  Andreas Schlegel  <andi at sojamo.de>
 
       * version 0.7.5
