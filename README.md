@@ -435,6 +435,7 @@ mwi-gui-component / ControlP5 fork
       
       
 2010-08-03  Andreas Schlegel
+
       * version 0.5.2
       * Slider2D: a new Controller, 2D slider control.
       * Button, Bang, Toggle, : setImage() defines an image for DEFAULT,OVER,ACTIVE,HIGHLIGHT mode.
@@ -461,6 +462,7 @@ mwi-gui-component / ControlP5 fork
       * Knob: all new.
           	
 2010-04-04  Andreas Schlegel
+
       * version 0.5.1
       * ControlP5: lock() and unlock() are working again.
       * ControlEvent: added function id() to make access to the id of  controller, group, tab, etc. easier
@@ -471,6 +473,7 @@ mwi-gui-component / ControlP5 fork
       * ControllerGroup: adding enableCollapse(), disableCollapse(), isCollapse() to enable/disable the collapsing and opening of a controllerGroup e.g. listBox.
            	
 2010-03-26  Andreas Schlegel
+
       * version 0.5.0
       * making transition to 1.5+, no more java 1.4 support.
       * compiling against processing 1.1
@@ -481,6 +484,7 @@ mwi-gui-component / ControlP5 fork
       * example ControlP5quick: new, ControlP5quick shows how to quickly add Controllers with auto-arrangement.
                 
 2010-02-16  Andreas Schlegel
+
       * version 0.4.7
       * Slider: adding TickMarks and replacing steps with snapToTickMarks().
       * ControlWindow: adding setUndecorated(), isUndecorated(), toggleUndecorated()
@@ -489,16 +493,20 @@ mwi-gui-component / ControlP5 fork
       * BitFontRenderer: adding warning for character that are not supported by the BitFontRenderer.
        	  
 2010-02-06  Andreas Schlegel
+
       * version 0.4.6 
       * ControlWindow: imageMode was not set back to CENTER/CORNER correctly, now fixed.
  
 0.4.5
+
       * ControllerGroup: adding moveTo(String). will move ControllerGroups such as e.g. Textarea to another tab.
 
 0.4.4
+
       * ControlWindow: imageMode CENTER/CORNER issue fixed.
 
 0.4.3
+
       * Controller.isInside is private now. use setIsInside(true/false) and getIsInside() to access this boolean field.
       * trying to solve the problem of overlapping described here:
       http://processing.org/discourse/yabb2/YaBB.pl?num=1259885420/0#0
@@ -509,9 +517,11 @@ mwi-gui-component / ControlP5 fork
       * Toggle: adding toggle()
  
 0.4.2
--
+
+
 
 0.4.1
+
       * Controller: added changeValue() to change the float value of a controller without broadcasting its change as a event. 
       * Numberbox: added setMultiplier() and multiplier() to customize the value sensitivity.
       * Toggle: setLabelVisible() is now working.
@@ -523,6 +533,7 @@ mwi-gui-component / ControlP5 fork
 (note: take a look at subversion changelog generator http://ch.tudelft.nl/~arthur/svn2cl/)
 
 0.3.15
+
       * Texfield: textfield scrolls to the left if text is larger than display area.
       * Knob: knob setValue issue solved.
 
@@ -533,6 +544,7 @@ mwi-gui-component / ControlP5 fork
 
 
 0.3.14
+
       * ScrollList: adding void hideScrollbar()
       adding void showScrollbar()
       adding void showScrollbar()
@@ -551,6 +563,7 @@ mwi-gui-component / ControlP5 fork
       use e.g. mySlider.captionLabel().setFont(ControlP5.grixel).adjust();
 
 0.3.13
+
       * Textfield: adding setAutoClear(true/false) prevents the textfield to be cleared after pressing RETURN.
       adding clear(), clears the current textline
       adding keepFocus(true/false)
@@ -560,19 +573,23 @@ mwi-gui-component / ControlP5 fork
       adding submit()
 
 0.3.12
+
       * Radio: if deactiveAll is set before the first button is added, the first button will not trigger an event.
       * ControlGroup: added method getBackgroundHeight() to get the height of a group's background that has been set before.
       * Textfield: fixed bug with clearing the variable myTextline too early.
 
 0.3.11
+
       * Textfield: added method setText to Textfield
       * Range: made corrections to Range, _myUnit was not set properly. now fixed. Range remains experimental.
 
 0.3.10
+
       * fixed little issues with setColor, again.
       * removed decimal point when setDecimalPrecision(0)
 
 0.3.9
+
       * Range: defautValue for min shows correct value now.
       * Radio: added deactivateAll()
       * TextLabel: added setWidth, setHeight
@@ -589,82 +606,3 @@ Textlabel myTextlabel = new Textlabel(this,"a single textlabel.",20,100,400,200,
 myTab.addDrawable(myTextlabel);
 
 
-
-TODO
-=====
-2011-06-02  Andreas Schlegel
-
-
-2011-03-24  Andreas Schlegel
-      * finish info to toString conversion
-      * implement plugTo for ControllerGroups
-      * BitFontRenderer addBitFont is broken, see the ControlP5bitFont example, 
-      the font is cut off at the bottom, probably something wrong with 
-      the label's PImage height. 
-
-2010-08-07  Andreas Schlegel
-      * fix ControlWindowCanvas.pre(), doesnt work anymore.
-      
-2010-07-25  Andreas Schlegel
-      * Android support, current version conflicts with android java (ControlWindow, PAppletWindow, using Toolkit when loading bit-font, KeyEvents, etc.)
-      * CColor: alpha handling
-      * Chart: finish. a chart graph controller to display line, bar, pie and histogram charts.
-       
-2010-04-02  Andreas Schlegel
-      * BitFontRenderer: \n is recognized as a not-supported-character. fix!
-      * general: processingjs port
-      * Knob: implement new version of knob
-      * Textfield: implement new version of textfield
-      * TextArea: implement new version of TextArea
-      * Label: implement modifications so that text rendering for P3D works properly
-      * picking: use an image and color-coding for picking controllers instead mouse-coordinates against rectangular boxes.
-
-
-
-* fileChooser conflicts with mouse event.
-http://processing.org/discourse/yabb2/YaBB.pl?num=1247162607/0#0
-
-
-* alt-tab causes problems with dragging functionality.
-http://processing.org/discourse/yabb2/YaBB.pl?num=1242718131/0#0
-
-* Multilist, pop out to the left.
-* ScrollList, slider on the left option.
-* ScrollList: collapse/and hide. add option to hide the scroll-list area but only keep the scrollbar.
-* add CheckBoxList
-* tab issues as addressed in this post:
-http://processing.org/discourse/yabb_beta/YaBB.cgi?board=LibraryProblems;action=display;num=1237538493;start=2#2
- - moveTo does not work for only a String which would stanbd for the name of a tab
- - controlP5.window(this).activateTab("myTab");
-   controlP5.tab("myTab").mousePressed();
-* ControlGroup, set Width of bar. the + - toggle is not updated visually.
-* Text -Field, -Label, -Area: customize font
-* textarea: when changing the font of the valueLabel, the scrollbar is not updated / does not show even it is required. current hack is: myTextarea.setHeight(myTextarea.valueLabel().height()); 
-* textarea: automatically updating the scrollbar whensetting text with setText() see email from martin froehlich 16.january 2009
-* save and load does not work for some controllers.
-* loading and saving
-* multilist, range, matrix dont load from xml file.
-* colorstyle does not save and load.
-* labels dont save properly, background color is not saved.
-* matrix needs to be redone. develop whole new concept for matrix / synthesizer.
-* multitouch support
-* controlWindow: add feedback when closing window. see email from henri 5 january 2009
-* controllerStyle: see email from johnny rodgers 30 november 2008
-* range: see email from hartmut bohnacker 27 november 2008
-* textfield: see email from henri 14 october 2008
-* save and open file dialog: see email from henri 12 october 2008
-* ControlBroadcaster suggestions: see email from aaron mayers 2 october 2008
-* pushmatrix / popMatrix : see email from florian 6 june 2008
-Lib.pre() { /*other code */ pushMatrix(); }
-PApplet.draw() { ... }
-Lib.draw() { popMatrix(); /* the lib code, untransformed */ }
-
-
-
-DONE
-* (done) add setArrayValue to Controller class.
-* (done, implemented with TickMark) Slider: snap 
-* (done) add id() method to ControlEvent
-* (done, fixed) fix save/load. saving twice and loading again results in empty. 
-* (done) add setTitle to ControlWindow http://processing.org/discourse/yabb2/YaBB.pl?num=1245762312/0#0
-* (done, now ListBox) redo ScrollList so that it becomes a controller? change the button management of a scrollList. 
