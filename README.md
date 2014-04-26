@@ -1,22 +1,28 @@
 
 
-mwi-gui-component / ControlP5 fork
+ControlP5
 =================
+
+
 
 build
 -----------------
 install processing jar:
-     mvn install:install-file -Dfile=core.jar -DgroupId=org.processing -DartifactId=core -Dversion=11 -Dpackaging=jar
+
+      mvn install:install-file -Dfile=core.jar -DgroupId=org.processing -DartifactId=core -Dversion=11 -Dpackaging=jar
      
 then :
-     mvn package
+
+      mvn package
 
 
 changes
 -----------------
 2012-06-20  Trey Marc
 
- * adding maven 
+ * remove triangle in numberBox 
+ 
+ * adding build with maven 
 
 2012-05-30  Andreas Schlegel  <andi at sojamo.de>
 
